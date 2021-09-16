@@ -24,7 +24,15 @@ delete 'tasks/:taskId', deleteTask
 
 ## Steps
 
-This is a **general overview** of the steps in this demo. You don't need to add details here.
+1- Install Axios
+<br/>
+2- Create fetchTasks method in the taskStore and set it to action
+<br/>
+3- Wrap the method with a try catch block
+<br/>
+4- Do the same for deleteTask method
+<br/>
+5- The same for createTask method
 
 ## Instructor Notes
 
