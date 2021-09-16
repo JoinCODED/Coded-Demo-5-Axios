@@ -1,14 +1,26 @@
 # DEMO-NAME
 
-This is the template for demos. These repos are the starging points and instructions for short live-coding sessions where the instructor will demonstrate a specific concept.
+ToDo List.
 
 ## What is this demo?
 
-Explain what this demo is? Is it an incrementer? Is it a wand shop? Is it a text editor?  
+A todo list app that let you create/delete tasks and set a priority.
 
 ## What are the objectives?
 
-Why do we need this demo? What concepts are covered?
+The students should learn how to fetch/create/delete tasks from the backend.
+
+## Backend
+
+Link: https://react-demo-axios-be.herokuapp.com
+<br/>
+Endpoints:
+<br/>
+get '/tasks', getTasks
+<br/>
+post '/tasks', createTask
+<br/>
+delete 'tasks/:taskId', deleteTask
 
 ## Steps
 
@@ -18,4 +30,4 @@ This is a **general overview** of the steps in this demo. You don't need to add 
 
 These are detailed notes written by various instructors. Feel free to use them or write your own.
 
-* [Aziz's Notes](https://github.com/JoinCODED/DEMO-Template/blob/main/aziz.md)
+- [Aziz's Notes](https://github.com/JoinCODED/DEMO-Template/blob/main/aziz.md)
