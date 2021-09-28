@@ -24,7 +24,7 @@ delete 'tasks/:taskId', deleteTask
 
 ## Steps
 
-1- Install Axios
+1- Install Axios `yarn add axios` 
 <br/>
 2- Create fetchTasks method in the taskStore and set it to action
 <br/>
