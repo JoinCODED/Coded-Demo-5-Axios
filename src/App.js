@@ -8,8 +8,7 @@ import tasksData from './tasksData';
 function App() {
   const [tasks, setTasks] = useState(tasksData);
   const createTask = (newTask) => {
-    newTask.id = tasks[tasks.length - 1].id + 1;
-    setTasks([...tasks, newTask]);
+    //to do : create task
   };
 
   return (

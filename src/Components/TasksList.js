@@ -1,9 +1,9 @@
 import React from 'react';
 import TaskItem from './TaskItem';
-import taskStore from '../stores/taskStore';
-import { observer } from 'mobx-react';
-function TasksList() {
-  const tasksList = taskStore.tasks.map((task) => <TaskItem task={task} />);
+
+
+function TasksList(props) {
+  const tasksList = props.tasks.map((task) => <TaskItem task={task} />);
 
   return (
     <div class="row">
@@ -18,4 +18,4 @@ function TasksList() {
   );
 }
 
-export default observer(TasksList);
+export default TasksList;

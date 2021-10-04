@@ -1,5 +1,6 @@
 import React from 'react';
-import taskStore from '../stores/taskStore';
+
+
 export default function TaskItem(props) {
   const task = props.task;
   return (
@@ -10,7 +11,7 @@ export default function TaskItem(props) {
         <p
           className="remove"
           onClick={() => {
-            taskStore.deleteTask(task.id);
+            //to do : pass the task to delete to app
           }}
         >
           Delete

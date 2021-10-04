@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
-import taskStore from '../stores/taskStore';
+import React from 'react';
 
 export default function AddTaskForm(props) {
-  const [task, setTask] = useState({
-    title: '',
-    priority: '',
-  });
+
   const handleChange = (event) => {
-    setTask({ ...task, [event.target.name]: event.target.value });
+    //to do: save new task data
   };
   const handleSubmit = (event) => {
-    event.preventDefault();
-    taskStore.createTask(task);
-    setTask({
-      title: '',
-      priority: '',
-    });
+    //to do : stop refreshing the page 
+    // pass new task to app 
   };
   return (
     <div class="col-md-12">
@@ -29,7 +21,7 @@ export default function AddTaskForm(props) {
                 placeholder="What will you do today?"
                 name="title"
                 required
-                value={task.title}
+
                 onChange={handleChange}
               />
             </div>
@@ -37,7 +29,7 @@ export default function AddTaskForm(props) {
               className="form-select select"
               name="priority"
               id="prio"
-              value={task.priority}
+
               onChange={handleChange}
             >
               <option value="">Priority</option>
