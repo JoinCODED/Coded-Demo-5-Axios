@@ -23,6 +23,7 @@ delete 'tasks/:taskId', deleteTask
 
 ## Steps
 
+### Fetch:
 1. Install Axios `yarn add axios` 
 2. in App.js `import axios from "axios"`
 3. create a fetch tasks function 
@@ -30,15 +31,20 @@ delete 'tasks/:taskId', deleteTask
 5. add await and async
 6. set tasks (response.data)
 7. try catch
-8. create task function 
-9. 
-2- Create fetchTasks method in the taskStore and set it to action
-<br/>
-3- Wrap the method with a try catch block
-<br/>
-4- Do the same for deleteTask method
-<br/>
-5- The same for createTask method
+
+### Create:
+9. go to create task form 
+10. create state called task
+11. add its value for the inputs and onchange
+12. `event.preventDefault();`
+13. in app fill createTask function
+14. push new task to the array `setTasks([...tasks, newTask])`
+15. look at the responce ( we see ID) great backend stuff!
+
+
+### Delete :
+1. in task Item pass id to the function u pass as a prope
+2. create a temp array to filter out the delted task
 
 ## Instructor Notes
 
