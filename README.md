@@ -24,7 +24,7 @@ delete 'tasks/:taskId', deleteTask
 ## Steps
 
 1. Install Axios `yarn add axios` 
-2. in App.js `import axios from "axis"
+2. in App.js `import axios from "axios"`
 3. create a fetch tasks function and call it in use effect
 4. add await and async
 2- Create fetchTasks method in the taskStore and set it to action
