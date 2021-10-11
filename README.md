@@ -26,25 +26,22 @@ delete 'tasks/:taskId', deleteTask
 ### Fetch:
 1. Install Axios `yarn add axios` 
 2. in App.js `import axios from "axios"`
-3. create a fetch tasks function 
-4. call it in use effect 
-5. add await and async
-6. set tasks (response.data)
-7. try catch
+3. create a fetch tasks function
+4. add a button  
+6. add await and async
+7. set tasks (response.data)
+8. try catch
+9. call it in use effect 
 
 ### Create:
-9. go to create task form 
-10. create state called task
-11. add its value for the inputs and onchange
-12. `event.preventDefault();`
-13. in app fill createTask function
-14. push new task to the array `setTasks([...tasks, newTask])`
-15. look at the responce ( we see ID) great backend stuff!
+1. in app.js add call to BE
+2. look at the response ( we see ID) great backend stuff!
 
 
 ### Delete :
-1. in task Item pass id to the function u pass as a prope
-2. create a temp array to filter out the delted task
+1. in app.js add call to BE
+2. look at the response 
+
 
 ## Instructor Notes
 
