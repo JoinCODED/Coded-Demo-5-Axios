@@ -2,22 +2,21 @@ body {
   background-color: #8f4df8;
 }
 
-.main-todo-input {
+.task-form {
+  max-width: 500px;
+  margin: 20px auto;
   background: #fff;
   padding: 0 120px 0 0;
   border-radius: 1px;
   margin-top: 200px;
   box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3);
-}
-
-.fl-wrap {
-  float: left;
+  float: center;
   width: 100%;
   position: relative;
 }
 
 .main-todo-input:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -40px;
   width: 50px;
@@ -25,15 +24,6 @@ body {
   background: rgba(255, 255, 255, 0.41);
   left: 50%;
   margin-left: -25px;
-}
-
-.main-todo-input-item {
-  float: left;
-  width: 100%;
-  box-sizing: border-box;
-  border-right: 1px solid #eee;
-  height: 50px;
-  position: relative;
 }
 
 .main-todo-input-item input:first-child {
@@ -48,11 +38,19 @@ body {
   padding-left: 20px;
 }
 
-.main-search-button {
-  background: #4db7fe;
+.task-form input {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #eee;
+  height: 50px;
+  position: relative;
+  border: none;
+  padding: 5px;
 }
 
-.main-search-button {
+.task-form button {
+  background: #4db7fe;
   position: absolute;
   right: 0px;
   height: 88px;
@@ -119,6 +117,13 @@ body {
 
 .remove {
   float: right;
+  color: #eb0d0d !important;
+  font-size: 14px;
+  cursor: pointer;
+}
+.update {
+  margin-right: 5px;
+  float: right;
   color: #757575 !important;
   font-size: 14px;
   cursor: pointer;
@@ -162,4 +167,29 @@ ul {
 }
 .select {
   width: 100%;
+}
+
+.update-form {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 0 120px 0 0;
+  border-radius: 1px;
+  box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3);
+  float: center;
+  width: 100%;
+  position: relative;
+}
+.update-form button {
+  background: #4db7fe;
+  position: absolute;
+  right: 0px;
+  height: 43px;
+  width: 100px;
+  color: #fff;
+  top: 44px;
+  border: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  cursor: pointer;
 }

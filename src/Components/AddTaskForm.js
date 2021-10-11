@@ -1,49 +1,46 @@
-import React from 'react';
+import React, { useState } from "react";
 
-export default function AddTaskForm(props) {
+function Form({ createTask }) {
+  const [task, setTask] = useState({ title: "", priority: "" });
 
-  const handleChange = (event) => {
-    //to do: save new task data
+  const handleChange = (e) => {
+    //title       : "wash dishes"
+    //priority    :  "high"
+    setTask({ ...task, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (event) => {
-    //to do : stop refreshing the page 
-    // pass new task to app 
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); //stops page from refreshing
+    createTask(task);
+    setTask({ title: "", priority: "" });
   };
+
   return (
-    <div class="col-md-12">
-      <form onSubmit={handleSubmit}>
-        <div class="main-todo-input-wrap">
-          <div class="main-todo-input fl-wrap">
-            <div class="main-todo-input-item">
-              <input
-                type="text"
-                id="todo-list-item"
-                placeholder="What will you do today?"
-                name="title"
-                required
+    <div>
+      <form onSubmit={handleSubmit} className="task-form">
+        <input
+          value={task.title}
+          name="title"
+          required
+          placeholder="What do you need to do today?"
+          onChange={handleChange}
+        />
+        <select
+          name="priority"
+          className="form-select"
+          onChange={handleChange}
+          value={task.priority}
+        >
+          <option>Priority</option>
+          <option value="high">High</option>
+          <option value="moderate">Moderate</option>
+          <option value="low">Low</option>
+        </select>
 
-                onChange={handleChange}
-              />
-            </div>
-            <select
-              className="form-select select"
-              name="priority"
-              id="prio"
-
-              onChange={handleChange}
-            >
-              <option value="">Priority</option>
-              <option value="High">High</option>
-              <option value="Moderate">Moderate</option>
-              <option value="Low">Low</option>
-            </select>
-
-            <button class="add-items main-search-button" onClick={handleSubmit}>
-              ADD
-            </button>
-          </div>
-        </div>
+        <button type="submit">ADD</button>
       </form>
     </div>
   );
 }
+
+export default Form;
