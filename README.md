@@ -24,7 +24,7 @@ delete 'tasks/:taskId', deleteTask
 ## Steps
 
 ### Fetch:
-1. Install Axios `yarn add axios` 
+1. Install Axios `npm install axios` 
 2. in App.js `import axios from "axios"`
 3. create a fetch tasks function
 4. add a button  
