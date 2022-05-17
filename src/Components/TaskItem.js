@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-export default function TaskItem(props) {
+// Stores
+import taskStore from "../stores/taskStore";
+
+export default function TaskItem({ task }) {
   const [update, setUpdate] = useState(false);
-
-  const task = props.task;
 
   return (
     <>
@@ -11,20 +12,10 @@ export default function TaskItem(props) {
         <p className="todo-text">
           {task.title}
           <span class="chip info">{task.priority}</span>
-          <p
-            className="remove"
-            onClick={() => {
-              props.deleteTask(task.id);
-            }}
-          >
+          <p className="remove" onClick={() => taskStore.deleteTask(task.id)}>
             Delete
           </p>
-          <p
-            className="update"
-            onClick={() => {
-              setUpdate(!update);
-            }}
-          >
+          <p className="update" onClick={() => setUpdate(!update)}>
             Update
           </p>
         </p>

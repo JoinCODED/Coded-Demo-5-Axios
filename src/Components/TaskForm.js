@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-function Form({ createTask }) {
+// Stores
+import taskStore from "../stores/taskStore";
+
+function TaskForm() {
   const [task, setTask] = useState({ title: "", priority: "" });
 
   const handleChange = (e) => {
@@ -9,10 +12,12 @@ function Form({ createTask }) {
     setTask({ ...task, [e.target.name]: e.target.value });
   };
 
+  const handleReset = () => setTask({ title: "", priority: "" });
+
   const handleSubmit = (e) => {
     e.preventDefault(); //stops page from refreshing
-    createTask(task);
-    setTask({ title: "", priority: "" });
+    taskStore.createTask(task);
+    handleReset();
   };
 
   return (
@@ -43,4 +48,4 @@ function Form({ createTask }) {
   );
 }
 
-export default Form;
+export default TaskForm;
