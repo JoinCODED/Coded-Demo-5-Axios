@@ -1,6 +1,5 @@
 # ToDo List
 
-
 ## What is this demo?
 
 A todo list app that let you create/delete tasks and set a priority.
